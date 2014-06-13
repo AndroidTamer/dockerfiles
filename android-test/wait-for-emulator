@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Waiting for emulator to start..."
+echo "Waiting for emulator to start. This may take a while...."
 
 bootanim=""
 starttime=$(date +%s)

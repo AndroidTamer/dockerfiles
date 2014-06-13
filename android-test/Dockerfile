@@ -24,3 +24,10 @@ RUN echo y | android update sdk -a -u -f -t extra-android-m2repository
 
 # Cleaning
 RUN apt-get clean
+
+# Add AVD
+RUN android create avd -n kitkat-arm -t "Google Inc.:Google APIs:19"
+
+# Add helper scripts
+ADD start-emulator /usr/local/bin/
+ADD wait-for-emulator /usr/local/bin/

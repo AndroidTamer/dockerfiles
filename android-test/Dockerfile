@@ -5,7 +5,7 @@ MAINTAINER alexfu
 RUN apt-get update -qq
 
 # Dependencies to execute android
-RUN apt-get install -y --no-install-recommends openjdk-7-jdk ia32-libs ia32-libs-multiarch git
+RUN apt-get install -y --no-install-recommends openjdk-7-jdk ia32-libs ia32-libs-multiarch git ssh
 
 # Main Android SDK
 RUN apt-get install -y --no-install-recommends wget

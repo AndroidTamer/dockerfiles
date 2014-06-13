@@ -5,7 +5,7 @@ MAINTAINER alexfu
 RUN apt-get update -qq
 
 # Dependencies to execute android
-RUN apt-get install -y --no-install-recommends openjdk-7-jdk ia32-libs ia32-libs-multiarch
+RUN apt-get install -y --no-install-recommends openjdk-7-jdk ia32-libs ia32-libs-multiarch git
 
 # Main Android SDK
 RUN apt-get install -y --no-install-recommends wget
@@ -21,9 +21,6 @@ RUN echo y | android update sdk -a -u -f -t android-19
 RUN echo y | android update sdk -a -u -f -t addon-google_apis-google-19
 RUN echo y | android update sdk -a -u -f -t extra-google-m2repository
 RUN echo y | android update sdk -a -u -f -t extra-android-m2repository
-
-# Git to pull external repositories of Android app projects
-RUN apt-get install -y --no-install-recommends git
 
 # Cleaning
 RUN apt-get clean
